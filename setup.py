@@ -80,7 +80,6 @@ def unpack_assets():
     else:
         # using default path
         asset_dir = os.path.join(os.path.expanduser('~'), '.gradle', 'caches', 'forge_gradle', 'assets')
-    asset_dir = os.path.join(os.path.expanduser('~'), '.gradle', 'caches', 'forge_gradle', 'assets')
     output_dir = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'minerl', 'MCP-Reborn', 'src', 'main', 'resources')
     index = load_asset_index(os.path.join(asset_dir, 'indexes', '1.16.json'))
     unpack_assets_impl(index, asset_dir, output_dir)
