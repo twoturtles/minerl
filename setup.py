@@ -18,9 +18,9 @@ from distutils.command.build import build
 from setuptools.dist import Distribution
 import shutil
 
-with open("README.md", "r") as fh:
+with open("README.md", "r", encoding="utf-8") as fh:
     markdown = fh.read()
-with open("requirements.txt", "r") as fh:
+with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = fh.read()
 
 MALMO_BRANCH = "minerl"
