@@ -3607,10 +3607,13 @@ diff -U0 -rN MCP-Reborn-vanilla/src/main/java/net/minecraft/client/KeyboardListe
 +
 diff -U0 -rN MCP-Reborn-vanilla/src/main/java/net/minecraft/client/MainWindow.java MCP-Reborn/src/main/java/net/minecraft/client/MainWindow.java
 --- MCP-Reborn-vanilla/src/main/java/net/minecraft/client/MainWindow.java	2024-10-13 15:15:59
-+++ MCP-Reborn/src/main/java/net/minecraft/client/MainWindow.java	2024-10-13 15:13:00
++++ MCP-Reborn/src/main/java/net/minecraft/client/MainWindow.java	2024-10-13 15:44:17
 @@ -88,0 +89,2 @@
 +      GLFW.glfwWindowHint(GLFW.GLFW_RESIZABLE, GLFW.GLFW_FALSE);
 +      GLFW.glfwWindowHint(GLFW.GLFW_VISIBLE, GLFW.GLFW_FALSE);
+@@ -172 +174 @@
+-         GLFW.glfwSetWindowIcon(this.handle, buffer);
++         //GLFW.glfwSetWindowIcon(this.handle, buffer);
 @@ -280,0 +283,19 @@
 +   public void resize(int newWidth, int newHeight) {
 +      if (width == newWidth && height == newHeight) {
