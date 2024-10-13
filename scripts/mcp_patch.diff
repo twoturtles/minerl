@@ -612,7 +612,7 @@ diff -u1 -rN MCP-Reborn-vanilla/launchClient.sh MCP-Reborn/launchClient.sh
 +fi
 +
 +fatjar=build/libs/mcprec-6.13.jar
-+java -Xmx$maxMem -jar $fatjar --envPort=$port
++java -Xmx$maxMem -XstartOnFirstThread -jar $fatjar --envPort=$port
 +[ $replaceable -gt 0 ]
 +
 diff -u1 -rN MCP-Reborn-vanilla/settings.gradle MCP-Reborn/settings.gradle
