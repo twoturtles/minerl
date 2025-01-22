@@ -1,0 +1,22 @@
+git clone git@github.com:twoturtles/minerl.git minerl-macos
+cd minerl-macos
+uv venv -p 3.9
+source .venv/bin/activate
+rm -rf ~/.gradle
+uv pip install pip
+pip install -r requirements.txt
+/usr/libexec/java_home -V
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+java -version
+bash scripts/setup_mcp.sh
+bash scripts/patch_mcp.sh
+cd minerl/MCP-Reborn
+# repeat downloadAssets as necessary
+./gradlew downloadAssets
+cd ../..
+python unpack_assets.py
+cd minerl/MCP-Reborn
+./gradlew clean build shadowJar
+cd ../..
+python setup_min.py install
+
